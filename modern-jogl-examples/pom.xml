@@ -4,57 +4,59 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.gilmour.fork</groupId>
-        <artifactId>fork-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
+    <groupId>org.gilmour.fork</groupId>
     <artifactId>modern-jogl-examples</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.jogamp.jogl/jogl-all-main -->
+        <!-- 3rd party dependencies -->
         <dependency>
             <groupId>org.jogamp.jogl</groupId>
             <artifactId>jogl-all-main</artifactId>
             <version>2.3.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jogl-all</artifactId>
+                    <groupId>org.jogamp.jogl</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.jogamp.gluegen/gluegen-rt-main -->
         <dependency>
             <groupId>org.jogamp.gluegen</groupId>
             <artifactId>gluegen-rt-main</artifactId>
             <version>2.3.2</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>gluegen-rt</artifactId>
+                    <groupId>org.jogamp.gluegen</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
-        <!--<dependency>-->
-        <!--<groupId>net.java.dev.jna</groupId>-->
-        <!--<artifactId>jna</artifactId>-->
-        <!--<version>4.2.2</version>-->
-        <!--</dependency>-->
-
-        <dependency>
-            <groupId>org.gilmour.fork</groupId>
-            <artifactId>glm</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.gilmour.fork</groupId>
-            <artifactId>javaUnofficialOpenglSDK</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/one.util/streamex -->
         <dependency>
             <groupId>one.util</groupId>
             <artifactId>streamex</artifactId>
             <version>0.6.2</version>
         </dependency>
+        <!--
+                <dependency>
+                    <groupId>net.java.dev.jna</groupId>
+                    <artifactId>jna</artifactId>
+                    <version>4.2.2</version>
+                </dependency>
+        -->
 
+        <!-- Gilmour dependencies -->
+        <dependency>
+            <groupId>org.gilmour.fork</groupId>
+            <artifactId>glm</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.gilmour.fork</groupId>
+            <artifactId>javaUnofficialOpenglSDK</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 
@@ -72,7 +74,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
