@@ -15,23 +15,11 @@
             <groupId>org.jogamp.jogl</groupId>
             <artifactId>jogl-all-main</artifactId>
             <version>2.3.2</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>jogl-all</artifactId>
-                    <groupId>org.jogamp.jogl</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.jogamp.gluegen</groupId>
             <artifactId>gluegen-rt-main</artifactId>
             <version>2.3.2</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>gluegen-rt</artifactId>
-                    <groupId>org.jogamp.gluegen</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>one.util</groupId>
