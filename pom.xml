@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.gilmour.fork</groupId>
+    <artifactId>modern-jogl-examples</artifactId>
+    <version>1.0.1</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.compiler.source>1.8</java.compiler.source>
+        <java.compiler.target>1.8</java.compiler.target>
+    </properties>
+
+
+    <dependencies>
+        <!-- 3rd party dependencies -->
+        <dependency>
+            <groupId>org.jogamp.jogl</groupId>
+            <artifactId>jogl-all-main</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jogamp.gluegen</groupId>
+            <artifactId>gluegen-rt-main</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>one.util</groupId>
+            <artifactId>streamex</artifactId>
+            <version>0.6.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.java-graphics/glm -->
+        <dependency>
+            <groupId>io.github.java-graphics</groupId>
+            <artifactId>glm</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.java-graphics/javaUnofficialOpenglSDK -->
+        <dependency>
+            <groupId>io.github.java-graphics</groupId>
+            <artifactId>javaUnofficialOpenglSDK</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${java.compiler.source}</source>
+                    <target>${java.compiler.target}</target>
+                    <excludes>
+                        <exclude>tut16/**</exclude>
+                        <exclude>tut15/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
